@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar text-center color="primary">
+      <ion-buttons slot="start">
+      <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Image Gallery</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="api.imagesList">
+      <ion-card *ngFor="let image of api.imagesList">
+          <img style="width:100%"  [src]="image" alt="" />
+        </ion-card>
+  </div>
+   
+</ion-content>

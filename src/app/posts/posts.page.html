@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar text-center color='primary'>
+      <ion-buttons slot="start">
+          <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Posts List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-card *ngFor="let post of postRequests">
+      <ion-card-header>
+        <!-- Post ID : {{post.id}} -->
+      </ion-card-header>
+      <ion-card-content>
+        <p >{{ post.title }}</p>
+        <ion-row>
+          <ion-col>
+            <ion-note>
+              {{today | date:'d-M-y'}}
+            </ion-note>
+          </ion-col>
+
+          <ion-col col-4>
+            <ion-button (click)="showDetails(post)"> Details </ion-button>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-card-content>
+
+    </ion-card>
+
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)" *ngIf="page < totalPage">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

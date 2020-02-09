@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar text-center color="primary">
+      <ion-buttons slot="start">
+          <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Post Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-grid no-lines>
+    <ion-row>
+      <!-- <ion-col>User ID :</ion-col>
+      <ion-col>{{postDetails.userId}}</ion-col> -->
+
+      <ion-col push-lg="2" push-md="4" push-sm="2" size="12">
+        <div class="red">
+          User ID :
+        </div>
+      </ion-col>
+      <ion-col push-lg="6" push-md="4" push-sm="2" size="12">
+        <div>
+          {{postDetails.userId}}
+        </div>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <!-- <ion-col>Post ID :</ion-col>
+      <ion-col>{{postDetails.id}}</ion-col> -->
+
+      <ion-col push-lg="2" push-md="4" push-sm="2" size="12">
+        <div class="red">
+          Post ID :
+        </div>
+      </ion-col>
+      <ion-col push-lg="6" push-md="4" push-sm="2" size="12">
+        <div>
+          {{postDetails.id}}
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <!-- <ion-col>Post Title</ion-col>
+      <ion-col>{{postDetails.title}}</ion-col> -->
+
+      <ion-col push-lg="2" push-md="4" push-sm="2" size="12">
+        <div class="red">
+          Post Title :
+        </div>
+      </ion-col>
+      <ion-col push-lg="6" push-md="4" push-sm="2" size="12">
+        <div>
+          {{postDetails.title}}
+        </div>
+      </ion-col>
+
+
+    </ion-row>
+
+    <ion-row>
+      <!-- <ion-col>Post Body</ion-col>
+      <ion-col>{{postDetails.body}}</ion-col> -->
+
+      <ion-col push-lg="2" push-md="4" push-sm="2" size="12">
+        <div class="red">
+          Post Body :
+        </div>
+      </ion-col>
+      <ion-col push-lg="6" push-md="4" push-sm="2" size="12">
+        <div>
+          {{postDetails.body}}
+        </div>
+      </ion-col>
+
+    </ion-row>
+
+
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar text-center color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button text="back" icon="arrow-round-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Capture Image</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div style="margin-top: 60px;text-align: center;">
+      <ion-button (click)="capture()">
+          <ion-icon name="camera"></ion-icon>  Take Snap
+      </ion-button>
+</div>
+<div style="margin-top: 10px;text-align: center;">
+    <ion-button (click)="pickImage()">
+        <ion-icon name="image"></ion-icon>  Browse
+    </ion-button>
+</div>
+
+
+  <img *ngIf="api.imagesList.length==0" src="assets/images/d.png" alt="" />
+  <img *ngIf="api.imagesList.length!=0" [src]="api.imagesList[api.imagesList.length-1]"
+    alt="" />
+
+  <div style="margin-top: 10px;text-align: center;">
+      <ion-button (click)="showImage()">
+          <ion-icon name="images"></ion-icon> 
+          Gallery Page
+      </ion-button>
+  </div>
+
+</ion-content>
